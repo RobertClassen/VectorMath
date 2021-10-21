@@ -1,9 +1,11 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class ColorExtensions
 	{
@@ -16,7 +18,7 @@ namespace WellDefinedValues
 				color.a.Clamp(min.a, max.a));
 		}
 
-		public static Color Clamp01(this Color color, bool isEnabled = Core.Numeric.IsClampEnabledDefault)
+		public static Color Clamp01(this Color color, bool isEnabled = Numeric.IsClampEnabledDefault)
 		{
 			return isEnabled ? new Color(
 				color.r.Clamp01(), 

@@ -1,9 +1,11 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector2Extensions
 	{
@@ -94,7 +96,7 @@ namespace WellDefinedValues
 		/// Clamps the <c>x</c> and <c>y</c> components of the <c>vector</c> individually, 
 		/// between <c>0</c> and <c>1</c>.
 		/// </summary>
-		public static Vector2 ClampXY01(this Vector2 vector, bool isEnabled = Core.Numeric.IsClampEnabledDefault)
+		public static Vector2 ClampXY01(this Vector2 vector, bool isEnabled = Numeric.IsClampEnabledDefault)
 		{
 			return isEnabled ? vector.ClampXY(Vector2.zero, Vector2.one) : vector;
 		}

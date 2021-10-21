@@ -1,4 +1,4 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;

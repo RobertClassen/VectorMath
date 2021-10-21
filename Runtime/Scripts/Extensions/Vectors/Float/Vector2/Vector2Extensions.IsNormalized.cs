@@ -1,9 +1,11 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector2Extensions
 	{
@@ -12,7 +14,7 @@ namespace WellDefinedValues
 		/// </summary>
 		public static bool IsNormalized(this Vector2 vector)
 		{
-			return Math.Abs(vector.sqrMagnitude - Float.One) < Core.Numeric.MagnitudeDelta;
+			return Math.Abs(vector.sqrMagnitude - Float.One) < Numeric.MagnitudeDelta;
 		}
 	}
 }

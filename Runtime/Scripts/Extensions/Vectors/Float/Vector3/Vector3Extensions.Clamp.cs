@@ -1,13 +1,15 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector3Extensions
 	{
-		public static Vector3 Clamp01(this Vector3 vector, bool isEnabled = Core.Numeric.IsClampEnabledDefault)
+		public static Vector3 Clamp01(this Vector3 vector, bool isEnabled = Numeric.IsClampEnabledDefault)
 		{
 			return isEnabled ? vector.ClampXYZ(Vector3.zero, Vector3.one) : vector;
 		}

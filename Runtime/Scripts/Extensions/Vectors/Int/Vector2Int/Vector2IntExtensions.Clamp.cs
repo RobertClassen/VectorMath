@@ -1,9 +1,10 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
 
 	public static partial class Vector2IntExtensions
 	{

@@ -1,10 +1,11 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
-	using Core;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector3Extensions
 	{

@@ -1,9 +1,10 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector2Extensions
 	{
@@ -20,7 +21,7 @@ namespace WellDefinedValues
 		/// If set to <c>true</c> the returned angle is never greater than 180° or smaller than -180°.<br/>
 		/// If set to <c>false</c> the returned angle is never greater than 180°.<br/>
 		/// </param>
-		public static float Angle(this Vector2 from, Vector2 to, bool isSigned = Core.Numeric.IsAngleSignedDefault)
+		public static float Angle(this Vector2 from, Vector2 to, bool isSigned = Numeric.IsAngleSignedDefault)
 		{
 			return isSigned ? Vector2.SignedAngle(from, to) : Vector2.Angle(from, to);
 		}

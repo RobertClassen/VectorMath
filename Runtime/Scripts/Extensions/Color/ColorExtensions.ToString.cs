@@ -1,9 +1,10 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics.Core;
 
 	public static partial class ColorExtensions
 	{
@@ -12,7 +13,7 @@ namespace WellDefinedValues
 		/// </summary>
 		public static string ToHexStringRGB(this Color color)
 		{
-			return String.Hashtag + ColorUtility.ToHtmlStringRGB(color);
+			return Numeric.Hashtag + ColorUtility.ToHtmlStringRGB(color);
 		}
 
 		/// <summary>
@@ -20,7 +21,7 @@ namespace WellDefinedValues
 		/// </summary>
 		public static string ToHexStringRGBA(this Color color)
 		{
-			return String.Hashtag + ColorUtility.ToHtmlStringRGBA(color);
+			return Numeric.Hashtag + ColorUtility.ToHtmlStringRGBA(color);
 		}
 	}
 }

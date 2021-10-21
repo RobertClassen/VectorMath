@@ -1,9 +1,11 @@
-namespace WellDefinedValues
+namespace VectorMath
 {
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
 	using UnityEngine;
+	using WellDefinedNumerics;
+	using WellDefinedNumerics.Core;
 
 	public static partial class Vector3Extensions
 	{
@@ -15,7 +17,7 @@ namespace WellDefinedValues
 		/// See https://docs.unity3d.com/ScriptReference/Vector3.Lerp.html
 		/// </remarks>
 		public static Vector3 Lerp(this Vector3 vector, Vector3 other, float t = Float.OneHalf, 
-			bool isClamped = Core.Numeric.IsLerpClampedDefault)
+			bool isClamped = Numeric.IsLerpClampedDefault)
 		{
 			return new Vector3(
 				t.Lerp(vector.x, other.x, isClamped), 
