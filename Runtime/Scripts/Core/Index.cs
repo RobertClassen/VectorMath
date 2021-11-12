@@ -3,7 +3,7 @@ namespace VectorMath.Core
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
-	using WellDefinedNumerics;
+	using NumericMath;
 
 	public static class Index
 	{

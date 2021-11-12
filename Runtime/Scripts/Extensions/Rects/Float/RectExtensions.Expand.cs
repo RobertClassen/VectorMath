@@ -4,8 +4,8 @@ namespace VectorMath
 	using System.Collections;
 	using System.Collections.Generic;
 	using Core;
+	using NumericMath.Core;
 	using UnityEngine;
-	using WellDefinedNumerics.Core;
 
 	public static partial class RectExtensions
 	{

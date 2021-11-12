@@ -4,8 +4,8 @@ namespace VectorMath
 	using System.Collections;
 	using System.Collections.Generic;
 	using Core;
+	using NumericMath;
 	using UnityEngine;
-	using WellDefinedNumerics;
 
 	public static partial class Vector3Extensions
 	{

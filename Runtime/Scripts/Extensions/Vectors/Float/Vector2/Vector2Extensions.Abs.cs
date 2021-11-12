@@ -3,8 +3,8 @@
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
+	using NumericMath;
 	using UnityEngine;
-	using WellDefinedNumerics;
 
 	public static partial class Vector2Extensions
 	{
