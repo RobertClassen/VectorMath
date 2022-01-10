@@ -23,7 +23,7 @@ namespace VectorMath
 		public static Rect GetCell(this Rect rect, int x, int y, int xCount, int yCount, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
-			return isEnabled ? rect.GetCell(x, xCount, y, yCount, Rectangle.SpaceDefault, Rectangle.SpaceDefault) : rect;
+			return isEnabled ? rect.GetCell(x, y, xCount, yCount, Rectangle.SpaceDefault, Rectangle.SpaceDefault) : rect;
 		}
 
 		/// <summary>
@@ -40,7 +40,7 @@ namespace VectorMath
 		public static Rect GetCell(this Rect rect, int x, int y, int xCount, int yCount, float space, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
-			return isEnabled ? rect.GetCell(x, xCount, y, yCount, space, space) : rect;
+			return isEnabled ? rect.GetCell(x, y, xCount, yCount, space, space) : rect;
 		}
 
 		/// <summary>
@@ -79,7 +79,7 @@ namespace VectorMath
 		/// <param name="xCount">The number of columns.</param>
 		/// <param name="xSpace">The space between columns.</param>
 		/// <param name="isEnabled">Returns the original <c>rect</c> if set to <c>false</c>.</param>
-		public static Rect GetColumn(this Rect rect, int x, int xCount, float xSpace = Core.Rectangle.SpaceDefault, 
+		public static Rect GetColumn(this Rect rect, int x, int xCount, float xSpace = Rectangle.SpaceDefault, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
 			if(!isEnabled)
@@ -100,7 +100,7 @@ namespace VectorMath
 		/// <param name="yCount">The number of rows.</param>
 		/// <param name="ySpace">The space between rows.</param>
 		/// <param name="isEnabled">Returns the original <c>rect</c> if set to <c>false</c>.</param>
-		public static Rect GetRow(this Rect rect, int y, int yCount, float ySpace = Core.Rectangle.SpaceDefault, 
+		public static Rect GetRow(this Rect rect, int y, int yCount, float ySpace = Rectangle.SpaceDefault, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
 			if(!isEnabled)
