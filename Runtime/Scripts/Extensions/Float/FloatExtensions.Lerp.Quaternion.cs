@@ -6,7 +6,7 @@ namespace VectorMath
 	using NumericMath.Core;
 	using UnityEngine;
 
-	public static partial class QuaternionExtensions
+	public static partial class FloatExtensions
 	{
 		/// <summary>
 		/// Interpolates between both Quaternions by <c>t</c> and normalizes the result afterwards.
@@ -16,10 +16,9 @@ namespace VectorMath
 		/// See https://docs.unity3d.com/ScriptReference/Quaternion.Lerp.html
 		/// </remarks>
 		/// <seealso cref="Slerp"/>
-		public static Quaternion Lerp(this Quaternion quaternion, Quaternion other, float t, 
-			bool isClamped = Numeric.IsLerpClampedDefault)
+		public static Quaternion Lerp(this float t, Quaternion a, Quaternion b, bool isClamped = Numeric.IsLerpClampedDefault)
 		{
-			return isClamped ? Quaternion.Lerp(quaternion, other, t) : Quaternion.LerpUnclamped(quaternion, other, t);
+			return isClamped ? Quaternion.Lerp(a, b, t) : Quaternion.LerpUnclamped(a, b, t);
 		}
 	}
 }

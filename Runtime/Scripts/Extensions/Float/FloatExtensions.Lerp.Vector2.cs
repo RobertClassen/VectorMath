@@ -7,7 +7,7 @@ namespace VectorMath
 	using NumericMath.Core;
 	using UnityEngine;
 
-	public static partial class Vector2Extensions
+	public static partial class FloatExtensions
 	{
 		/// <summary>
 		/// Linearly interpolates between both vectors by <c>t</c>.
@@ -16,12 +16,11 @@ namespace VectorMath
 		/// See https://docs.unity3d.com/ScriptReference/Vector2.LerpUnclamped.html  
 		/// See https://docs.unity3d.com/ScriptReference/Vector2.Lerp.html
 		/// </remarks>
-		public static Vector2 Lerp(this Vector2 vector, Vector2 other, float t = Float.OneHalf, 
-			bool isClamped = Numeric.IsLerpClampedDefault)
+		public static Vector2 Lerp(this float t, Vector2 a, Vector2 b, bool isClamped = Numeric.IsLerpClampedDefault)
 		{
 			return new Vector2(
-				t.Lerp(vector.x, other.x, isClamped), 
-				t.Lerp(vector.y, other.y, isClamped));
+				t.Lerp(a.x, b.x, isClamped), 
+				t.Lerp(a.y, b.y, isClamped));
 		}
 	}
 }

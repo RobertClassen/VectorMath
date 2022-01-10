@@ -95,7 +95,7 @@ namespace VectorMath
 
 		public static Vector2 GetRandomPosition(this Rect rect)
 		{
-			return new Vector2(rect.LerpX(Random.value), rect.LerpY(Random.value));
+			return new Vector2(Random.value.LerpX(rect), Random.value.LerpY(rect));
 		}
 
 		/// <summary>

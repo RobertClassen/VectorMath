@@ -7,14 +7,14 @@
 	using NumericMath.Core;
 	using UnityEngine;
 
-	public static partial class RectExtensions
+	public static partial class FloatExtensions
 	{
-		public static float LerpX(this Rect rect, float t, bool isClamped = Numeric.IsLerpClampedDefault)
+		public static float LerpX(this float t, Rect rect, bool isClamped = Numeric.IsLerpClampedDefault)
 		{
 			return rect.xMin.Lerp(rect.xMax, t, isClamped);
 		}
 
-		public static float LerpY(this Rect rect, float t, bool isClamped = Numeric.IsLerpClampedDefault)
+		public static float LerpY(this float t, Rect rect, bool isClamped = Numeric.IsLerpClampedDefault)
 		{
 			return rect.yMin.Lerp(rect.yMax, t, isClamped);
 		}
