@@ -15,17 +15,11 @@ namespace VectorMath
 		public static Vector2 Clamp(this Vector2 vector, float min, float max)
 		{
 			float sqrMagnitude = vector.sqrMagnitude;
-			if(sqrMagnitude < min * min)
-			{
-				float magnitude = (float)Math.Sqrt((double)sqrMagnitude);
-				return new Vector2(vector.x / magnitude * min, vector.y / magnitude * min);
-			}
-			if(sqrMagnitude > max * max)
-			{
-				float magnitude = (float)Math.Sqrt((double)sqrMagnitude);
-				return new Vector2(vector.x / magnitude * max, vector.y / magnitude * max);
-			}
-			return vector;
+			return sqrMagnitude < min * min 
+				? vector / sqrMagnitude.Sqrt() * min 
+					: sqrMagnitude > max * max 
+				? vector / sqrMagnitude.Sqrt() * max 
+					: vector;
 		}
 
 		/// <summary>
@@ -46,12 +40,7 @@ namespace VectorMath
 		public static Vector2 ClampMax(this Vector2 vector, float max)
 		{
 			float sqrMagnitude = vector.sqrMagnitude;
-			if(sqrMagnitude > max * max)
-			{
-				float magnitude = (float)Math.Sqrt((double)sqrMagnitude);
-				return new Vector2(vector.x / magnitude * max, vector.y / magnitude * max);
-			}
-			return vector;
+			return sqrMagnitude > max * max ? vector / sqrMagnitude.Sqrt() * max : vector;
 		}
 
 		/// <summary>
@@ -60,12 +49,7 @@ namespace VectorMath
 		public static Vector2 ClampMin(this Vector2 vector, float min)
 		{
 			float sqrMagnitude = vector.sqrMagnitude;
-			if(sqrMagnitude < min * min)
-			{
-				float magnitude = (float)Math.Sqrt((double)sqrMagnitude);
-				return new Vector2(vector.x / magnitude * min, vector.y / magnitude * min);
-			}
-			return vector;
+			return sqrMagnitude < min * min ? vector / sqrMagnitude.Sqrt() * min : vector;
 		}
 
 		/// <summary>
