@@ -7,6 +7,7 @@ namespace VectorMath
 	using NumericMath;
 	using NumericMath.Core;
 	using UnityEngine;
+	using Random = UnityEngine.Random;
 
 	public static partial class RectExtensions
 	{
@@ -90,6 +91,11 @@ namespace VectorMath
 			ValidateX(x, xCount, out xMax);
 			float width = (rect.width - xMax * xSpace) / (float)xCount;
 			return new Rect(rect.x + (width + xSpace) * x, rect.y, width, rect.height); 
+		}
+
+		public static Vector2 GetRandomPosition(this Rect rect)
+		{
+			return new Vector2(rect.LerpX(Random.value), rect.LerpY(Random.value));
 		}
 
 		/// <summary>
