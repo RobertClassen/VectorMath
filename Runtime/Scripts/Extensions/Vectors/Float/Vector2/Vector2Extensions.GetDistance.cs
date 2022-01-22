@@ -8,16 +8,16 @@ namespace VectorMath
 	public static partial class Vector2Extensions
 	{
 		/// <summary>
-		/// Returns the distance between both vectors.
+		/// Returns the distance between both positions.
 		/// </summary>
 		/// <remarks>
 		/// See https://docs.unity3d.com/ScriptReference/Vector2.Distance.html
 		/// </remarks>
-		public static float Distance(this Vector2 vector, Vector2 other)
+		public static float GetDistance(this Vector2 vector, Vector2 other)
 		{
 			float x = vector.x - other.x;
 			float y = vector.y - other.y;
-			return (float)Math.Sqrt((double)(x * x + y * y));
+			return (float)Math.Sqrt(x * x + y * y);
 		}
 	}
 }
