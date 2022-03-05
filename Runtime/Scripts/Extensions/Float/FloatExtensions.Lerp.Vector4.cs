@@ -16,13 +16,13 @@ namespace VectorMath
 		/// See https://docs.unity3d.com/ScriptReference/Vector4.LerpUnclamped.html  
 		/// See https://docs.unity3d.com/ScriptReference/Vector4.Lerp.html
 		/// </remarks>
-		public static Vector4 Lerp(this  float t, Vector4 vector, Vector4 other, bool isClamped = Numeric.IsLerpClampedDefault)
+		public static Vector4 Lerp(this float t, Vector4 a, Vector4 b, bool isClamped = Numeric.IsLerpClampedDefault)
 		{
 			return new Vector4(
-				t.Lerp(vector.x, other.x, isClamped), 
-				t.Lerp(vector.y, other.y, isClamped), 
-				t.Lerp(vector.z, other.z, isClamped), 
-				t.Lerp(vector.w, other.w, isClamped));
+				t.Lerp(a.x, b.x, isClamped), 
+				t.Lerp(a.y, b.y, isClamped), 
+				t.Lerp(a.z, b.z, isClamped), 
+				t.Lerp(a.w, b.w, isClamped));
 		}
 	}
 }
