@@ -44,7 +44,7 @@ namespace VectorMath
 		{
 			from.Normalize();
 			to.Normalize();
-			return from.Dot(to) > -Float.One + Numeric.MagnitudeDelta ? from.Angle(to, from.Cross(to), isSigned) : 180f;
+			return from.Dot(to) > -Float.One + Numeric.MagnitudeDelta ? from.Angle(to, from.Cross(to), isSigned) : Float.HalfCircleDegrees;
 		}
 
 		/// <summary>
