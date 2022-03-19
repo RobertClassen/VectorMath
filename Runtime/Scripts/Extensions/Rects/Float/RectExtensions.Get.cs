@@ -20,25 +20,9 @@ namespace VectorMath
 		/// <param name="y">The row index.</param>
 		/// <param name="xCount">The number of columns.</param>
 		/// <param name="yCount">The number of rows.</param>
-		/// <param name="isEnabled">Returns the original <c>rect</c> if set to <c>false</c>.</param>
-		public static Rect GetCell(this Rect rect, int x, int y, int xCount, int yCount, 
-			bool isEnabled = Function.IsEnabledDefault)
-		{
-			return isEnabled ? rect.GetCell(x, y, xCount, yCount, Rectangle.SpaceDefault, Rectangle.SpaceDefault) : rect;
-		}
-
-		/// <summary>
-		/// Divides the <c>rect</c> into <c>xCount</c> columns and <c>yCount</c> rows 
-		/// and returns the <c>Rect</c> for the cell at column <c>x</c>, row <c>y</c>.
-		/// </summary>
-		/// <param name="rect">The original <c>Rect</c>.</param>
-		/// <param name="x">The column index.</param>
-		/// <param name="y">The row index.</param>
-		/// <param name="xCount">The number of columns.</param>
-		/// <param name="yCount">The number of rows.</param>
 		/// <param name="space">The space between columns and rows.</param>
 		/// <param name="isEnabled">Returns the original <c>rect</c> if set to <c>false</c>.</param>
-		public static Rect GetCell(this Rect rect, int x, int y, int xCount, int yCount, float space, 
+		public static Rect GetCell(this Rect rect, int x, int y, int xCount, int yCount, float space = Rectangle.SpaceDefault, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
 			return isEnabled ? rect.GetCell(x, y, xCount, yCount, space, space) : rect;
