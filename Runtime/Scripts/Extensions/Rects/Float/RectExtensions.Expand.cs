@@ -22,8 +22,15 @@ namespace VectorMath
 		public static Rect Expand(this Rect rect, float left, float right, float down, float up, 
 			bool isEnabled = Function.IsEnabledDefault)
 		{
-			return isEnabled ? new Rect(rect.x - left, rect.y - down, 
-				rect.width + right * Rectangle.ExpansionFactor, rect.height + up * Rectangle.ExpansionFactor) : rect;
+			if(!isEnabled)
+			{
+				return rect;
+			}
+			rect.xMin += left;
+			rect.xMax += right;
+			rect.yMin += down;
+			rect.yMax += up;
+			return rect;
 		}
 	}
 }
