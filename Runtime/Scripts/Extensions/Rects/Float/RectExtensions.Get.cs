@@ -8,6 +8,7 @@ namespace VectorMath
 	using NumericMath.Core;
 	using UnityEngine;
 	using Random = UnityEngine.Random;
+	using Index = Core.Index;
 
 	public static partial class RectExtensions
 	{
