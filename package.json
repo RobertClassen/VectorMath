@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "displayName": "VectorMath",
   "description": "Extension methods for Vectors and related structs.",
-  "keywords": [
-    "Vector",
-    "Extension methods"
-  ],
   "author": {
     "name": "Robert Classen",
-    "email": "Robert.Classen.dev@gmail.com",
+    "email": "Robert.Classen.dev+VectorMath@gmail.com",
     "url": "https://github.com/RobertClassen"
   },
   "type": "library"
